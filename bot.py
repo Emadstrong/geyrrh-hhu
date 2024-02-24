@@ -15,8 +15,7 @@ async def on_ready():
   print('System rebooted.')
   bot.add_view(Verification())
 
-class Verification(discord)
-class button_view(discord.ui.View):
+class Verification(discord), button_view(discord.ui.View):
   def __init__(self):
     super().__init__(timeout = None)
  
