@@ -38,8 +38,7 @@ async def initialize(ctx):
   embed = discord.Embed(title = "Hello ViTK",description = "nice man")
   await ctx.send(embed = embed, view = Verification())
 
-bot = abot()
-tree = commands.CommandTree(bot)
+
 
 @tree.command(guild = discord.Object(id=1203956999168200816), name = 'button', description='Launches role button')
 async def button(interaction: discord.Interaction):
