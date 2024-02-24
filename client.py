@@ -28,10 +28,10 @@ class button_view(discord.ui.View):
  
   @discord.ui.button(label="hello", custom_id="Embed", style=discord.ButtonStyle.success)
   async def Embed(self, interaction: discord.Interaction, button: discord.ui.Button):
-    role = 1203956999239368738 
-    user = interaction.user
+    role=1203956999239368738 
+    user=interaction.user
     if type(bot.role) is not discord.Role:
-      bot.role = interaction.guild.get_role(1205160396701442098)
+      bot.role=interaction.guild.get_role(1205160396701442098)
     if bot.role not in interaction.user.roles:
       await interaction.user.add_roles(bot.role)
       await interaction.response.send_message(f"EMAD VITK", ephemeral=True)
