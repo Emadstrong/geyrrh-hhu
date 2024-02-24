@@ -41,9 +41,8 @@ bot = commands.Bot(command_prefix='.', intents=intents, help_command=None)
 
 @bot.command()
 async def nice(ctx, arg):
-  embed = discord.Embed(title = "Hello ViTK",description = "nice man")
+  embed=discord.Embed(title="Hello ViTK", description="nice man")
   await ctx.send(embed = embed)
-
 
 async def button(interaction: discord.Interaction):
   await interaction.response.send_message(view = button_view())
