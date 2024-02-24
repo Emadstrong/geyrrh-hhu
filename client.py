@@ -21,14 +21,14 @@ async def on_ready():
 @bot.slash_command() 
 async def button(ctx): 
   embed=discord.Embed(title="Hello ViTK", description="nice man")
-  await ctx.send(embed = embed)
+  await ctx.send(embed = embed, view=MyView())
   
 class button_view(discord.ui.View):
   def __init__(self):
     super().__init__(timeout = None)
  
   @discord.ui.button(label="hello", custom_id="Embed", style=discord.ButtonStyle.success)
-  async def Embed(self, interaction: discord.Interaction, button: discord.ui.Button):
+  async def MyView(self, interaction: discord.Interaction, button: discord.ui.Button):
     role=1203956999239368738 
     user=interaction.user
     if type(bot.role) is not discord.Role:
