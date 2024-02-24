@@ -1,5 +1,6 @@
 import discord
 import discord.ext
+import discord.ui
 from discord.ext import commands
 import os
 from dotenv import load_dotenv 
