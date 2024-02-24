@@ -12,7 +12,7 @@ class button_view(discord.ui.View):
   @discord.ui.button(label = "hello")
   async def verify(self, interaction: discord.Interaction, button: discord.ui.Button):
     if type(client.role) is not discord.Role:
-      client.role = interaction.guild.get_role(55537364)
+      client.role = interaction.guild.get_role(1205160396701442098)
     if client.role not in interaction.user.roles:
       await interaction.user.add_roles(client.role)
       await interaction.response.send_message(f"EMAD VITK", ephemeral = True)
@@ -22,7 +22,7 @@ class aclient(discord.Client):
   def __init__(self):
     super().__init__(intents = discord.Intents.default())
     self.synced = False
-    self.role = 26737346
+    self.role = 1205160396701442098
     self.added = False
 
 async def on_ready(self):
@@ -38,7 +38,7 @@ print(f"We have logged in as {self.user}.")
 client = aclient()
 tree = app_commands.CommandTree(client)
 
-@tree.command(guild = discord.Object(id=733464646), name = 'button', description='Launches role button')
+@tree.command(guild = discord.Object(id=1203956999168200816), name = 'button', description='Launches role button')
 async def button(interaction: discord.Interaction):
   await interaction.response.send_message(view = button_view())
 
