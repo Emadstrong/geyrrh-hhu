@@ -13,16 +13,17 @@ bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 @bot_event
 async def on_ready():
   print('System rebooted.')
+  bot.add_view(Verification()
 
 class Verification(discord
 class button_view(discord.ui.View):
   def __init__(self):
     super().__init__(timeout = None)
  
-  @discord.ui.button(label = "hello",custom_id= "Embed",button,style =
-                     discord.ButtonStyle.success)
-  
+  @discord.ui.button(label = "hello",custom_id= "Embed",button,style = discord.ButtonStyle.success)
   async def Embed(self, interaction: discord.Interaction, button: discord.ui.Button):
+    role =
+    user =
     if type(client.role) is not discord.Role:
       client.role = interaction.guild.get_role(1205160396701442098)
     if client.role not in interaction.user.roles:
@@ -30,22 +31,10 @@ class button_view(discord.ui.View):
       await interaction.response.send_message(f"EMAD VITK", ephemeral = True)
     else: await interaction.response.send_message(f"Emad vitk already pressed the button", ephemeral = True)
 
-class aclient(discord.Client):
-  def __init__(self):
-    super().__init__(intents = discord.Intents.default())
-    self.synced = False
-    self.role = 1205160396701442098
-    self.added = False
-
-async def on_ready(self):
-  await self.wait_until_ready
-  if not self.synced:
-
-    self.synced = True
-    if not self.added:
-      self.add_view(button_view())
-      self.added = True
-print(f"We have logged in as {self.user}.")
+@bot.command()
+async def initialize(ctx):
+  embed = discord.Embed(title = "Hello ViTK",description = "nice man")
+  await ctx.send(embed = embed, view = Verification())
 
 client = aclient()
 tree = app_commands.CommandTree(client)
