@@ -19,9 +19,9 @@ async def on_ready():
   bot.add_view(Verification())
 
 @bot.slash_command() 
-async def button(ctx, arg): 
+async def nice(ctx, arg): 
   embed=discord.Embed(title="Hello ViTK", description="nice man")
-  await ctx.send(embed = embed, view=MyView())
+  await ctx.send(embed=embed, view=MyView())
   
 class button_view(discord.ui.View):
   def __init__(self):
