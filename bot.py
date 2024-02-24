@@ -14,7 +14,6 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
-already_alerted = []
 @bot_event()
 async def on_ready():
   print('System rebooted.')
