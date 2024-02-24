@@ -19,7 +19,7 @@ class button_view(discord.ui.View):
   def __init__(self):
     super().__init__(timeout = None)
  
-  @discord.ui.button(label = "hello",custom_id= "Embed",button,style = discord.ButtonStyle.success)
+  @discord.ui.button(label = "hello",custom_id= "Embed", button,style = discord.ButtonStyle.success)
   async def Embed(self, interaction: discord.Interaction, button: discord.ui.Button):
     role = 1203956999239368738 
     user = interaction.user
