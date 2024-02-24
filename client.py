@@ -19,8 +19,9 @@ async def on_ready():
   bot.add_view(Verification())
 
 @bot.command()
-async def test(ctx, arg):
-    await ctx.send(arg)
+async def nice(ctx, arg):
+  embed=discord.Embed(title="Hello ViTK", description="nice man")
+  await ctx.send(embed = embed)
   
 class button_view(discord.ui.View):
   def __init__(self):
@@ -36,13 +37,6 @@ class button_view(discord.ui.View):
       await interaction.user.add_roles(bot.role)
       await interaction.response.send_message(f"EMAD VITK", ephemeral=True)
     else: await interaction.response.send_message(f"Emad vitk already pressed the button", ephemeral=True)
-
-bot = commands.Bot(command_prefix='.', intents=intents, help_command=None)
-
-@bot.command()
-async def nice(ctx, arg):
-  embed=discord.Embed(title="Hello ViTK", description="nice man")
-  await ctx.send(embed = embed)
 
 async def button(interaction: discord.Interaction):
   await interaction.response.send_message(view = button_view())
