@@ -1,6 +1,5 @@
 import discord
 from dotenv import load_dotenv 
-from discord import app_commands
 
 load_dotenv()
 bot_token = os.environ['bot_token']
