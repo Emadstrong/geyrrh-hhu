@@ -18,8 +18,8 @@ async def on_ready():
   print('System rebooted.')
   bot.add_view(Verification())
 
-@bot.command()
-async def nice(ctx, arg):
+@bot.slash_command() 
+async def button(ctx): 
   embed=discord.Embed(title="Hello ViTK", description="nice man")
   await ctx.send(embed = embed)
   
