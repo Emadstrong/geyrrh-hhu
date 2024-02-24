@@ -18,6 +18,10 @@ async def on_ready():
   print('System rebooted.')
   bot.add_view(Verification())
 
+@bot.command()
+async def test(ctx, arg):
+    await ctx.send(arg)
+  
 class button_view(discord.ui.View):
   def __init__(self):
     super().__init__(timeout = None)
