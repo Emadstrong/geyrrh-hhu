@@ -18,7 +18,7 @@ async def on_ready():
   print('System rebooted.')
   bot.add_view(Verification())
 
-@bot.slash_command() 
+@bot.command() 
 async def button(ctx, arg): 
   embed=discord.Embed(title="Hello ViTK", description="nice man")
   await ctx.send(embed = embed, view=MyView())
