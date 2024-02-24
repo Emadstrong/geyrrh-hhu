@@ -1,5 +1,9 @@
-import discotd
+import discord
+from dotenv import load_dotenv 
 from discord import app_commands
+
+load_dotenv()
+bot_token = os.environ['bot_token']
 
 class button_view(discord.ui.View):
   def __init__(self) -> None:
