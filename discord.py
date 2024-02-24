@@ -38,4 +38,4 @@ tree = app_commands.CommandTree(client)
 async def button(interaction: discord.Interaction):
   await interaction.response.send_message(view = button_view())
 
-client.run('YOUR BOT TOKEN')
+client.run(bot_token)
