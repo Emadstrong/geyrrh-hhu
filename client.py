@@ -14,7 +14,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
-@bot_event()
+@client_event()
 async def on_ready():
   await bot.process_commands() 
   print('System rebooted.')
@@ -35,7 +35,7 @@ class button_view(discord.ui.View):
       await interaction.response.send_message(f"EMAD VITK", ephemeral = True)
     else: await interaction.response.send_message(f"Emad vitk already pressed the button", ephemeral = True)
 
-@bot.command()
+@client.command()
 async def initialize(ctx):
   embed = discord.Embed(title = "Hello ViTK",description = "nice man")
   await ctx.send(embed = embed, view = Verification())
