@@ -16,7 +16,7 @@ bot = commands.Bot(command_prefix='.', intents=intents, help_command=None)
 
 async def on_ready():
   print('System rebooted.')
-  bot.add_view(Verification())
+  bot.add_view(MyView())
 
 @bot.command() 
 async def nice(ctx, arg): 
@@ -39,6 +39,6 @@ class button_view(discord.ui.View):
     else: await interaction.response.send_message(f"Emad vitk already pressed the button", ephemeral=True)
 
 async def button(interaction: discord.Interaction):
-  await interaction.response.send_message(view = button_view())
+  await interaction.response.send_message(view=button_view())
 
 bot.run(bot_token)
