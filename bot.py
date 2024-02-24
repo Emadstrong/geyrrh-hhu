@@ -15,15 +15,15 @@ async def on_ready():
   print('System rebooted.')
   bot.add_view(Verification())
 
-class Verification(discord):
+class Verification(discord)
 class button_view(discord.ui.View):
   def __init__(self):
     super().__init__(timeout = None)
  
   @discord.ui.button(label = "hello",custom_id= "Embed",button,style = discord.ButtonStyle.success)
   async def Embed(self, interaction: discord.Interaction, button: discord.ui.Button):
-    role =
-    user =
+    role = 1203956999239368738 
+    user = interaction.user
     if type(client.role) is not discord.Role:
       client.role = interaction.guild.get_role(1205160396701442098)
     if client.role not in interaction.user.roles:
