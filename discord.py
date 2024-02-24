@@ -7,12 +7,21 @@ from dotenv import load_dotenv
 load_dotenv()
 bot_token = os.environ['bot_token']
 
+bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
+
+@bot_event
+async def on_ready():
+  print('System rebooted.')
+
+class Verification(discord
 class button_view(discord.ui.View):
-  def __init__(self) -> None:
+  def __init__(self):
     super().__init__(timeout = None)
  
-  @discord.ui.button(label = "hello")
-  async def verify(self, interaction: discord.Interaction, button: discord.ui.Button):
+  @discord.ui.button(label = "hello",custom_id= "Embed",button,style =
+                     discord.ButtonStyle.success)
+  
+  async def Embed(self, interaction: discord.Interaction, button: discord.ui.Button):
     if type(client.role) is not discord.Role:
       client.role = interaction.guild.get_role(1205160396701442098)
     if client.role not in interaction.user.roles:
