@@ -17,6 +17,7 @@ bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
 @bot_event()
 async def on_ready():
+  await bot.process_commands() 
   print('System rebooted.')
   bot.add_view(Verification())
 
