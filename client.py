@@ -14,9 +14,8 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
-@client_event()
+@bot_event
 async def on_ready():
-  await bot.process_commands() 
   print('System rebooted.')
   bot.add_view(Verification())
 
@@ -28,23 +27,23 @@ class button_view(discord.ui.View):
   async def Embed(self, interaction: discord.Interaction, button: discord.ui.Button):
     role = 1203956999239368738 
     user = interaction.user
-    if type(client.role) is not discord.Role:
-      client.role = interaction.guild.get_role(1205160396701442098)
-    if client.role not in interaction.user.roles:
-      await interaction.user.add_roles(client.role)
+    if type(bot.role) is not discord.Role:
+      bot.role = interaction.guild.get_role(1205160396701442098)
+    if bot.role not in interaction.user.roles:
+      await interaction.user.add_roles(bot.role)
       await interaction.response.send_message(f"EMAD VITK", ephemeral = True)
     else: await interaction.response.send_message(f"Emad vitk already pressed the button", ephemeral = True)
 
-@client.command()
+@bot.command()
 async def initialize(ctx):
   embed = discord.Embed(title = "Hello ViTK",description = "nice man")
   await ctx.send(embed = embed, view = Verification())
 
-client = aclient()
-tree = app_commands.CommandTree(client)
+bot = aclient()
+tree = app_commands.CommandTree(bot)
 
 @tree.command(guild = discord.Object(id=1203956999168200816), name = 'button', description='Launches role button')
 async def button(interaction: discord.Interaction):
   await interaction.response.send_message(view = button_view())
 
-client.run(bot_token)
+bot.run(bot_token)
