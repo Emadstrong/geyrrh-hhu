@@ -8,6 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 bot_token = os.environ['bot_token']
 
+intents = discord.Intents.all()
+intents.members = True
+intents.message_content = True
+
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
 @bot_event
