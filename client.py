@@ -39,8 +39,6 @@ async def initialize(ctx):
   await ctx.send(embed = embed, view = Verification())
 
 
-
-@tree.command(guild = discord.Object(id=1203956999168200816), name = 'button', description='Launches role button')
 async def button(interaction: discord.Interaction):
   await interaction.response.send_message(view = button_view())
 
