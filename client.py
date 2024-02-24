@@ -14,8 +14,7 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 
-def bot_event
-@bot_event
+def bot_event(
 async def on_ready():
   print('System rebooted.')
   bot.add_view(Verification())
