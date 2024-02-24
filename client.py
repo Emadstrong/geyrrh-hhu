@@ -38,7 +38,7 @@ class button_view(discord.ui.View):
     else: await interaction.response.send_message(f"Emad vitk already pressed the button", ephemeral = True)
 
 @bot.command()
-async def nice(ctx, embed):
+async def nice(ctx, arg):
   embed = discord.Embed(title = "Hello ViTK",description = "nice man")
   await ctx.send(embed = embed, view = Verification())
 
