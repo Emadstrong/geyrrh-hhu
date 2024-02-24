@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='!', intents=intents, help_command=None)
 @bot_event
 async def on_ready():
   print('System rebooted.')
-  bot.add_view(Verification():
+  bot.add_view(Verification())
 
 class Verification(discord
 class button_view(discord.ui.View):
