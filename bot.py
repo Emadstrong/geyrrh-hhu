@@ -2,6 +2,11 @@ import discord
 from discord.ext import commmands
 import os
 import asyncio
+from dotenv import load_dotenv
+
+load_dotenv()
+bot_token = os.environ['bot_token']
+
 
 client = commands.Bot(command_prefix".", intents=discord.Intents.all())
 
@@ -27,6 +32,6 @@ class SelfRoles(discord.ui.View):
 async def main():
   async with client:
     await load()
-    await client.start()
+    await client.start(bot_token)
 
 asyncio.run(main())
