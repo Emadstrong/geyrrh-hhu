@@ -27,7 +27,7 @@ class MyView(discord.ui.View):
   def __init__(self):
     super().__init__(timeout = None)
  
-  @discord.ui.button(label="hello", style=discord.ButtonStyle.success)
+  @discord.ui.button(label="hello", style=discord.ButtonStyle.green)
   async def MyView(self, interaction:discord.Interaction, button:discord.ui.Button):
     role=1203956999239368738 
     user=interaction.user
