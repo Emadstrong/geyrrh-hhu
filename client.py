@@ -19,7 +19,7 @@ async def on_ready():
   bot.add_view(MyView())
 
 @bot.command() 
-async def nice(ctx, arg, self): 
+async def nice(ctx, arg): 
   embed=discord.Embed(title="Hello ViTK", description="nice man")
   await ctx.send(embed = embed, view=MyView)
   
