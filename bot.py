@@ -25,7 +25,9 @@ class SelfRoles(discord.ui.View):
      
       await interaction.user.add_roles(green_role)
 
-
+@client.tree.command(name="selfroles", description"")
+async def self_roles(interaction: discord.Interaction):
+  await interaction.response.send_message(contant="nice one", view=SelfRoles())
 
 
 
