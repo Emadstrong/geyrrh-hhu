@@ -1,6 +1,6 @@
 import discord
 import discord.ui
-from discord.ext import commmands
+from discord import app_commands
 import os
 import asyncio
 from dotenv import load_dotenv
