@@ -21,7 +21,7 @@ async def on_ready():
 @bot.command() 
 async def nice(ctx, arg): 
   embed=discord.Embed(title="Hello ViTK", description="nice man")
-  await ctx.send(embed = embed, view=MyView)
+  await ctx.send(embed = embed, components=MyView)
   
 class MyView(discord.ui.View):
   def __init__(self):
