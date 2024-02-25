@@ -8,9 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 bot_token = os.environ['bot_token'] 
 
-async def _button(self, interaction:discord.Interaction, button:discord.ui.Button): 
+
 
 button =[
+    async def MyView(self, interaction:discord.Interaction, button:discord.ui.Button):
     interactions.ActionRow(
         components=[
             interactions.Button(
