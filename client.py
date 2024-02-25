@@ -27,8 +27,8 @@ class MyView(discord.ui.View):
   def __init__(self):
     super().__init__(timeout = None)
  
-  @discord.ui.button(label="hello", custom_id="Embed", row=0, style=discord.ButtonStyle.success)
-  async def MyView(self, interaction: discord.Interaction, button: discord.ui.Button):
+  @discord.ui.button(label="hello", style=discord.ButtonStyle.success)
+  async def MyView(self, interaction:discord.Interaction, button:discord.ui.Button):
     role=1203956999239368738 
     user=interaction.user
     if type(bot.role) is not discord.Role:
