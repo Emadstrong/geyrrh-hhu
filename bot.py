@@ -8,7 +8,7 @@ load_dotenv()
 bot_token = os.environ['bot_token']
 
 
-client = commands.Bot(command_prefix".", intents=discord.Intents.all)
+client = commands.Bot(command_prefix='.', intents=intents, help_command=None) 
 
 
 async def on_ready():
