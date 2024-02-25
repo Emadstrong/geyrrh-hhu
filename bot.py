@@ -1,6 +1,7 @@
 import discord
 import discord.ui
-from discord import app_commands
+import discord.ext
+from discord.ext import commands
 import os
 import asyncio
 from dotenv import load_dotenv
@@ -9,7 +10,7 @@ load_dotenv()
 bot_token = os.environ['bot_token']
 
 
-client = app_commands.Bot(command_prefix='.', intents=intents, help_command=None) 
+client = commands.Bot(command_prefix='.', intents=intents, help_command=None) 
 
 
 async def on_ready():
