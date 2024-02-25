@@ -23,7 +23,7 @@ async def nice(ctx, arg):
   embed=discord.Embed(title="Hello ViTK", description="nice man")
   await ctx.send(embed = embed, view=MyView)
   
-class button_view(discord.ui.View):
+class MyView(discord.ui.View):
   def __init__(self):
     super().__init__(timeout = None)
  
