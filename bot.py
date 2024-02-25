@@ -20,13 +20,13 @@ class SelfRoles(discord.ui.View):
   def __init__(self):
     super().__init__(timeout=None)
    
-    @discord.ui.button(label="", style=discord.ButtonStyle.green)
+    @discord.ui.button(label="green", style=discord.ButtonStyle.green)
     async def green_color(self, interaction: discord.Interaction, button: discord.ui.Button):
       green_role = discord.utils.get(interaction.guild.roles, name="Green")
      
       await interaction.user.add_roles(green_role)
 
-@client.tree.command(name="selfroles", description"ggyyg")
+@client.tree.command(name="selfroles", description="ggyyg")
 async def self_roles(interaction: discord.Interaction):
   await interaction.response.send_message(contant="nice one", view=SelfRoles())
 
