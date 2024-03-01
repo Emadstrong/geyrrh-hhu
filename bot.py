@@ -35,7 +35,7 @@ async def self_roles(interaction: discord.Interaction):
 
 async def main():
   async with client:
-    await load()
+    await float()
     await client.start(bot_token)
 
 asyncio.run(main())
