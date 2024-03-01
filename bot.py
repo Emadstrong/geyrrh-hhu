@@ -10,7 +10,7 @@ load_dotenv()
 bot_token = os.environ['bot_token']
 
 
-client = commands.Bot(command_prefix="!", intents=discord.Intents.all(), help_command=None) 
+client = commands.Bot(command_prefix="!", intents=discord.Intents.default(), help_command=None) 
 
 
 async def on_ready():
@@ -35,7 +35,7 @@ async def self_roles(interaction: discord.Interaction):
 
 async def main():
   async with client:
-    await float()
+    await load()
     await client.start(bot_token)
 
 asyncio.run(main())
